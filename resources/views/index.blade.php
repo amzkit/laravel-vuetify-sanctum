@@ -1,7 +1,7 @@
-@extends('layouts.vuetify.guest')
+@extends('layouts.vuetify')
 
 @section('content')
     <div id="app">
-        <guest-index></guest-index>
+        <app></app>
     </div>
 @endsection

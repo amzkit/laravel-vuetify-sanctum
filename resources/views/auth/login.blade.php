@@ -1,4 +1,4 @@
-@extends('layouts.vuetify.guest')
+@extends('layouts.vuetify')
 
 @section('content')
     <div id="app">

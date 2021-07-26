@@ -4,7 +4,7 @@
         <v-container fluid fill-height>
             <v-layout align-center justify-center>
 
-            <v-flex xs12 sm8 md4>
+            <v-flex xs12 sm10 md6>
                 <v-card class="elevation-12">
                 <v-toolbar dark color="primary">
                     <v-toolbar-title>Log In</v-toolbar-title>
@@ -18,8 +18,8 @@
                     <v-divider></v-divider>
 
                     <v-form ref="form" id="form" method="POST" action="/login">
-                    <v-text-field prepend-icon="person" name="email" label="Email" type="text" placeholder=" " persistent-placeholder></v-text-field>
-                    <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password" placeholder=" " persistent-placeholder></v-text-field>
+                    <v-text-field prepend-icon="person" v-model="email" name="email" label="Email" type="text" placeholder=" " persistent-placeholder></v-text-field>
+                    <v-text-field id="password" v-model="password" prepend-icon="lock" name="password" label="Password" type="password" placeholder=" " persistent-placeholder></v-text-field>
                     <v-text-field v-show="false" name="_token" :value="csrf"></v-text-field>
                     </v-form>
                 </v-card-text>
@@ -42,21 +42,19 @@ export default {
     components: { GuestTopBar },
     data: () => ({
             drawer: null,
+            email: '',
+            password: '',
             //csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             csrf: document.head.querySelector('meta[name="csrf-token"]').content,
         }),
         props: {
             source: String
         },
-        methods: {
-            onSubmit(){
-                document.getElementById("form").submit()
-            }
-        },
     methods:{
         redirect(url){
             window.location.href=url
-        }
+        },
+
     }
 
 }

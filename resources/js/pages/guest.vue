@@ -1,7 +1,7 @@
 <template>
     <v-app id="app" data-app>
+        <guest-top-bar />
         <v-main>
-            <guest-top-bar />
             <v-container
                 class="mx-auto" style="width:100%;max-width:784px"
                 fill-height
@@ -16,7 +16,7 @@
 
                             <v-card-text>
                                 I'm a Guest Index component from <br>
-                                /resources/js/pages/Index.vue
+                                /resources/js/pages/guest.vue
                             </v-card-text>
                         </v-card>
                     </v-col>

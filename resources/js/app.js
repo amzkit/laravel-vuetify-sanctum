@@ -25,13 +25,11 @@ import router from './router/index'
  // const files = require.context('./', true, /\.vue$/i)
  // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-    // Guest Index
+    // Guest
     Vue.component("guest-top-bar", require("./layouts/guest_top_bar.vue").default)
-    Vue.component("guest-index", require("./pages/guest_index.vue").default)
     Vue.component("login", require("./auth/login.vue").default )
 
     // Auth User Home
-    Vue.component("home", require("./pages/home.vue").default )
 
 
  /**
@@ -44,12 +42,12 @@ import Vuetify from 'vuetify';
 import Vue from 'vue';
 Vue.use(Vuetify);
 
-import Admin from './layouts/admin.vue';
+import App from './layouts/app.vue';
 
 const app = new Vue({
     router,
     store,
     el: "#app",
     vuetify: new Vuetify(),
-    components: { Admin },
+    components: { App },
 });

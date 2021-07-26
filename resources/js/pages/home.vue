@@ -3,7 +3,7 @@
         <v-col>
             <v-card>
                 <v-card-title>
-                <span class="">Home Component</span>
+                <span class="">Admin Login</span>
                 </v-card-title>
 
                 <v-card-text>

@@ -32,7 +32,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';//RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -93,7 +93,7 @@ class LoginController extends Controller
         $token = $userCreated->createToken('token-name')->plainTextToken;
         Auth::login($userCreated);
 
-        //return response()->json($userCreated, 200, ['Access-Token' => $token]);
+//        return response()->json(['user'=>$userCreated, 'Access-Token' => $token]);
         return redirect('/');
     }
 
